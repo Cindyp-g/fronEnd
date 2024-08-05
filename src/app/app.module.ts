@@ -7,12 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
 import { MascotaComponent } from './components/mascota/mascota.component';
+import { SaludutngComponent } from './components/saludutng/saludutng.component';
+import { DatosComponent } from './components/datos/datos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmpleadoComponent,
-    MascotaComponent
+    MascotaComponent,
+    SaludutngComponent,
+    DatosComponent
   ],
   imports: [
     BrowserModule,
