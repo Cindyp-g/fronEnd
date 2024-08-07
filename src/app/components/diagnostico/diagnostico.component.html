@@ -1,0 +1,82 @@
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <form #diagnosticoForm="ngForm" (ngSubmit)="createDiagnostico(diagnosticoForm)">
+                    <input type="hidden" name="folio" 
+                    [(ngModel)]="diagnosticoService.diagnostico.folio"
+                    >
+                    <div class="form-group">
+                        <input 
+                        type="text"
+                        class="form-control"
+                        placeholder="Nombre Paciente"
+                        name="nombrep"
+                        [(ngModel)]="diagnosticoService.diagnostico.nombrep"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                        type="date"
+                        class="form-control"
+                        placeholder="Fecha"
+                        name="fechad"
+                        [(ngModel)]="diagnosticoService.diagnostico.fechad"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                        type="email"
+                        class="form-control"
+                        placeholder="Responsable"
+                        name="responsable"
+                        [(ngModel)]="diagnosticoService.diagnostico.responsable"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                        type="number"
+                        class="form-control"
+                        placeholder="Num. Control"
+                        name="numcontrold"
+                        [(ngModel)]="diagnosticoService.diagnostico.numcontrold"
+                        >
+                    </div>
+                    <button class="btn btn-secondary m-2" (click)="formReset(diagnosticoForm)">Limpiar</button>
+                    <button class="btn btn-primary m-2">Guardar</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Folio</th>
+                    <th>Nombre Paciente</th>
+                    <th>Fecha</th>
+                    <th>Responsable</th>
+                    <th>Num. Control</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of diagnosticoService.diagnosticos">
+                    <td>{{item.folio}}</td>
+                    <td>{{item.nombrep}}</td>
+                    <td>{{item.fechad}}</td>
+                    <td>{{item.responsable}}</td>
+                    <td>{{item.numcontrold}}</td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" (click)="editDiagnostico(item)">
+                            <i class="material-icons">edit</i>
+                        </button>
+                        <button class="btn btn-danger btn-sm" (click)="deleteDiagnostico(item.folio)">
+                            <i class="material-icons">delete</i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

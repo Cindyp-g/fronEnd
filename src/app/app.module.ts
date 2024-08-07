@@ -7,16 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmpleadoComponent } from './components/empleado/empleado.component';
 import { MascotaComponent } from './components/mascota/mascota.component';
-import { SaludutngComponent } from './components/saludutng/saludutng.component';
-import { DatosComponent } from './components/datos/datos.component';
+import { DiagnosticoComponent } from './components/diagnostico/diagnostico.component';
+import { AlumnoComponent } from './components/alumno/alumno.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmpleadoComponent,
     MascotaComponent,
-    SaludutngComponent,
-    DatosComponent
+    DiagnosticoComponent,
+    AlumnoComponent
   ],
   imports: [
     BrowserModule,

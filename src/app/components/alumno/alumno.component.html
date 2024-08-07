@@ -1,0 +1,125 @@
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <form #alumnoForm="ngForm" (ngSubmit)="createAlumno(alumnoForm)">
+                    <input type="hidden" name="numcontrol" 
+                    [(ngModel)]="alumnoService.alumno.numcontrol"
+                    >
+                    <div class="form-group">
+                        <input 
+                        type="text"
+                        class="form-control"
+                        placeholder="Num. Control"
+                        name="numcontrol"
+                        [(ngModel)]="alumnoService.alumno.numcontrol"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                        type="text"
+                        class="form-control"
+                        placeholder="Nombre"
+                        name="nombre"
+                        [(ngModel)]="alumnoService.alumno.nombre"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                        type="text"
+                        class="form-control"
+                        placeholder="Apellido Paterno"
+                        name="apellidop"
+                        [(ngModel)]="alumnoService.alumno.apellidop"
+                        >
+                    </div>
+                    
+                    <div class="form-group">
+                        <input 
+                        type="text"
+                        class="form-control"
+                        placeholder="Apellido Materno"
+                        name="apellidom"
+                        [(ngModel)]="alumnoService.alumno.apellidom"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                        type="text"
+                        class="form-control"
+                        placeholder="Grupo"
+                        name="grupo"
+                        [(ngModel)]="alumnoService.alumno.grupo"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                        type="text"
+                        class="form-control"
+                        placeholder="Carrera"
+                        name="carrera"
+                        [(ngModel)]="alumnoService.alumno.carrera"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                        type="number"
+                        class="form-control"
+                        placeholder="Num. Celular"
+                        name="numcelular"
+                        [(ngModel)]="alumnoService.alumno.numcelular"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                        type="email"
+                        class="form-control"
+                        placeholder="Correo Email"
+                        name="correoe"
+                        [(ngModel)]="alumnoService.alumno.correoe"
+                        >
+                    </div>
+                    <button class="btn btn-secondary m-2" (click)="formReset(alumnoForm)">Limpiar</button>
+                    <button class="btn btn-primary m-2">Guardar</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Num. Control</th>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Grupo</th>
+                    <th>Carrera</th>
+                    <th>Num. Celular</th>
+                    <th>Correo Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of alumnoService.alumnos">
+                    <td>{{item.numcontrol}}</td>
+                    <td>{{item.nombre}}</td>
+                    <td>{{item.apellidop}}</td>
+                    <td>{{item.apellidom}}</td>
+                    <td>{{item.grupo}}</td>
+                    <td>{{item.carrera}}</td>
+                    <td>{{item.numcelular}}</td>
+                    <td>{{item.correoe}}</td>
+                    <td>
+                        <button class="btn btn-secondary btn-sm" (click)="editAlumno(item)">
+                            <i class="material-icons">edit</i>
+                        </button>
+                        <button class="btn btn-danger btn-sm" (click)="deleteAlumno(item.numcontrol)">
+                            <i class="material-icons">delete</i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
