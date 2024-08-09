@@ -4,12 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { MascotaComponent } from './components/mascota/mascota.component';
 import { DiagnosticoComponent } from './components/diagnostico/diagnostico.component';
 import { AlumnoComponent } from './components/alumno/alumno.component';
+import { usuarioComponent } from './components/usuario/usuario.component';
 
 const routes: Routes = [
   {path:'empleados',component:EmpleadoComponent},
   {path:'mascotas',component:MascotaComponent},
   {path:'diagnosticos',component:DiagnosticoComponent},
-  {path:'alumnos',component:AlumnoComponent}
+  {path:'alumnos',component:AlumnoComponent},
+  {path:'usuarios',component:usuarioComponent}
 ];
 
 @NgModule({

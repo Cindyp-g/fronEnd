@@ -44,6 +44,23 @@ export class DiagnosticoComponent implements OnInit {
     )}
   }     
 
+  updateDiagnostico(form:NgForm){
+     if(form.value.folio){
+       alert('actualizando'); 
+       this.diagnosticoService.editDiagnosico(form.value).subscribe(
+        res=> console.log(res),
+        err=> console.log(err)
+       );
+     }else{//Creando
+    this.diagnosticoService.createDiagnostico(form.value).subscribe(
+      res=> {
+        this.getDiagnosticos();
+        form.reset();
+      },
+      err=> console.log(err)
+    )}
+  } 
+
   deleteDiagnostico(folio:any){
     //alert('Borrando');
      const resp= confirm('Estas seguro de eliminarlo?');

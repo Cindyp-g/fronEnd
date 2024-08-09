@@ -3,5 +3,6 @@ export interface Diagnostico{
     nombrep: string,
     fechad: Date,
     responsable: string,
-    numcontrold: any
+    numcontrol: any,
+    diagnosticop:string
 }

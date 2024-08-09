@@ -14,7 +14,6 @@ export class AlumnoComponent implements OnInit {
   constructor(public alumnoService:AlumnoService) { }
 
   ngOnInit(): void {
-    //console.log(this.empleadoService.getEmpleados());
     this.getAlumnos();
   }
 
@@ -29,21 +28,24 @@ export class AlumnoComponent implements OnInit {
   }
 
   createAlumno(form:NgForm){
-     if(form.value.numcontrol){
-       alert('actualizando'); 
-       this.alumnoService.editAlumno(form.value).subscribe(
-        res=> console.log(res),
-        err=> console.log(err)
-       );
-     }else{//Creando
+     //Creando
     this.alumnoService.createAlumno(form.value).subscribe(
       res=> {
         this.getAlumnos();
         form.reset();
       },
       err=> console.log(err)
-    )}
+    )
   }     
+
+  updateAlumno(form:NgForm){
+      alert('actualizando'); 
+      this.alumnoService.editAlumno(form.value).subscribe(
+       res=> console.log(res),
+       err=> console.log(err)
+      );
+ }    
+
 
   deleteAlumno(numcontrol:any){
     //alert('Borrando');

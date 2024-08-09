@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';//<---
   providedIn: 'root'
 })
 export class EmpleadoService {
-  URL_API= 'http://192.168.3.14:3000/empleados/'; //<-----
+  URL_API= 'http://192.168.6.111:3000/empleados/'; //<-----
   public empleado:Empleado=
   {id:'',name:'',position:'',email:'',salary:0};
 

@@ -1,0 +1,114 @@
+/* Estilo para la cabecera */
+body{
+    background: center ;
+}
+.cabecera {
+    background-color:  rgb(34, 175, 255);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté sobre el contenido */
+}
+
+.cabecera h1 {
+    margin: 0;
+}
+
+/* Estilo para el menú lateral */
+.sidebar {
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    overflow-y: auto;
+    z-index: 100; /* Asegura que esté detrás de la cabecera */
+}
+
+.sidebar-header {
+    background-color:  rgb(34, 175, 255);
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color:  rgb(34, 175, 255);
+}
+
+/* Estilo para el contenido principal */
+.container {
+    margin-left: 200px; /* Ajuste según el ancho del menú lateral */
+    padding: 20px;
+}
+
+main {
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.grupo-formulario {
+    margin-bottom: 20px;
+    margin: 0 auto;
+    width: 850px;
+}
+
+.control-formulario {
+    width: calc(100% - 20px); /* Ajuste para el borde del input */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Para incluir el padding en el ancho total */
+}
+
+/* Estilos para los botones */
+.btn {
+    background-color:  rgb(34, 175, 255);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: rgb(34, 175, 255);
+}
+
+.btn-secundario {
+    background-color: #ccc;
+    color: #333;
+}
+
+.btn-secundario:hover {
+    background-color: #bbb;
+}
+
+/* Estilo para el pie de página */
+.pie-pagina {
+    background-color:  rgb(34, 175, 255);
+    color: white;
+    text-align: center;
+    padding: 2px;
+    position:static;
+    width: 100%;
+    bottom: 0;
+}

@@ -1,10 +1,10 @@
 export interface Alumno{
-    numcontrol?: string,            //<<<
+    numcontrol?: string,            
     nombre: string,
     apellidop: string,
     apellidom: string,
     grupo: string,
     carrera: string,
-    numcelular: any,
+    numcelular: string,
     correoe: string
 }

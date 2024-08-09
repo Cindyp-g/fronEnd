@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class DiagnosticoService {
   URL_API= 'http://localhost:3000/diagnosticos/'; 
   public diagnostico: Diagnostico=
-  {folio:'',nombrep:'',fechad: new Date(''),responsable:'',numcontrold:''};
+  {folio:'',nombrep:'',fechad: new Date(''),responsable:'',numcontrol:'', diagnosticop:''};
 
   diagnosticos: Diagnostico[]=[];
 
