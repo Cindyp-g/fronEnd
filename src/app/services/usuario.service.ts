@@ -10,8 +10,9 @@ export class usuarioService {
   URL_API= 'http://localhost:3000/usuarios/'; 
   public usuario: Usuario=
   { idu:'',
-    numcontol:'' ,    
-    correoe: ''};
+    usuarioa:'',
+    numcontrol:'' ,    
+    contrasena: ''};
 
   usuarios: Usuario[]=[];
 

@@ -10,22 +10,32 @@
                         <input 
                         type="text"
                         class="form-control"
+                        placeholder="Usuario"
+                        name="usuarioa"
+                        [(ngModel)]="usuarioService.usuario.usuarioa"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <input 
+                        type="text"
+                        class="form-control"
                         placeholder="Num. Control"
-                        name="numcontrolu"
-                        [(ngModel)]="usuarioService.usuario.numcontol"
+                        name="numcontrol"
+                        [(ngModel)]="usuarioService.usuario.numcontrol"
                         >
                     </div>
                     <div class="form-group">
                         <input 
                         type="email"
                         class="form-control"
-                        placeholder="Correo Email"
-                        name="correoe"
-                        [(ngModel)]="usuarioService.usuario.correoe"
+                        placeholder="Contraseña"
+                        name="contrasena"
+                        [(ngModel)]="usuarioService.usuario.contrasena"
                         >
                     </div>
                     <button class="btn btn-secondary m-2" (click)="formReset(usuarioForm)">Limpiar</button>
                     <button class="btn btn-primary m-2">Guardar</button>
+            
 
                 </form>
             </div>
@@ -35,15 +45,18 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th>Id</th>
                     <th>Num. Control</th>
-                    <th>Correo Email</th>
+                    <th>Usuario</th>
+                    <th>Contraseña</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let item of usuarioService.usuarios">
                     <td>{{item.idu}}</td>
-                    <td>{{item.numcontol}}</td>
-                    <td>{{item.correoe}}</td>
+                    <td>{{item.usuarioa}}</td>
+                    <td>{{item.numcontrol}}</td>
+                    <td>{{item.contrasena}}</td>
                     <td>
                         <button class="btn btn-secondary btn-sm" (click)="editUsuario(item)">
                             <i class="material-icons">edit</i>

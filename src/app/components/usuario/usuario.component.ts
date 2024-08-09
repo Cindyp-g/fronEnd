@@ -26,23 +26,22 @@ export class usuarioComponent implements OnInit {
       err => console.log(err)
     )
   }
-
   createUsuario(form:NgForm){
-     if(form.value.idu){
-       alert('actualizando'); 
-       this.usuarioService.editUsuario(form.value).subscribe(
-        res=> console.log(res),
-        err=> console.log(err)
-       );
-     }else{//Creando
-    this.usuarioService.createUsuario(form.value).subscribe(
-      res=> {
-        this.getUsuarios();
-        form.reset();
-      },
-      err=> console.log(err)
-    )}
-  }     
+      if(form.value.idu){
+        alert('actualizando'); 
+        this.usuarioService.editUsuario(form.value).subscribe(
+         res=> console.log(res),
+         err=> console.log(err)
+        );
+      }else{//Creando
+     this.usuarioService.createUsuario(form.value).subscribe(
+       res=> {
+         this.getUsuarios();
+         form.reset();
+       },
+       err=> console.log(err)
+     )}
+   }    
 
   deleteUsuario(idu:any){
     //alert('Borrando');

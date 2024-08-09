@@ -1,5 +1,7 @@
 export interface Usuario{
-    idu?: string,            //<<<
-    numcontol: string,
-    correoe: string
+    idu?: any, 
+    usuarioa: string,           //<<<
+    numcontrol: string,
+    contrasena: string
+
 }
