@@ -8,23 +8,28 @@
 </head>
 
 <body>
+    <header class="cabecera">
+    <h1>SaludUTNG</h1>
+    </header>
+
     <div class="container">
         <div class="sidebar">
             <div class="sidebar-header">
-                <h2>Menú</h2>
+                <h1>Menú</h1>
             </div>
             <ul>
                 <li><a href="/justificantes"><i class="fas fa-file-alt"></i> Justificante</a></li>
                 <li><a href="/alumnos"><i class="fas fa-notes-medical"></i> Alumno</a></li>
-                <li><a href="/usuarios"><i class="fa-solid fa-arrow-rotate-left"></i>Registrarse</a></li>
+                <li><a href="/usuarios"><i class="fa-solid fa-arrow-rotate-left"></i>Inicio</a></li>
             </ul>
         </div>
 
         <div class="informe-medico">
-            <h1>Informe Médico Salud UTNG</h1>
-                <form #diagnosticoForm="ngForm" (ngSubmit)="createDiagnostico(diagnosticoForm)">
+            <div class="header-logo"> <h2>Informe Médico Salud UTNG</h2><br></div>
+            <h2>Informe Médico Salud UTNG</h2><br>
+                <br><form #diagnosticoForm="ngForm" (ngSubmit)="createDiagnostico(diagnosticoForm)">
                     <input type="hidden" name="folio" [(ngModel)]="diagnosticoService.diagnostico.folio">
-
+            
                     <div class="form-group">
                         <label for="responsable-diagnostico">Responsable del diagnostico</label>
                         <input type="text" class="form-control" placeholder="Responsable" name="responsable"
@@ -67,13 +72,14 @@
                     </div>
                     <div>
                         <button type="submit" class="btn btn-success">Guardar</button>
-                        <button type="reset" class="btn btn-danger" (click)="formReset(diagnosticoForm)">Borrar formulario</button>
+                        <button type="reset" class="btn btn-danger" (click)="formReset(diagnosticoForm)">Borrar formulario</button> <br>
+                        <br><button type="submit" class="btn btn-success" routerLink="/justificantes">Seguir</button>
                     </div>
                 </form><br>
-
-                <div class="col-md-8">
+        <br>
+<br>
+                <br><div class="col-md-12">
                     <h2>Registro del Diagnostico</h2>
-
                     
                     <table class="table table-striped">
                         <thead>
@@ -105,11 +111,12 @@
                     </table>
                 </div>
                 
-        <footer class="pie-pagina">
-            <p>&copy; 2024 SaludUTNG. Todos los derechos reservados.</p>
-        </footer>
-    </div>
-    </div>
+</div>
+</div>
+<footer class="pie-pagina">
+    <p>&copy; 2024 SaludUTNG. Todos los derechos reservados.</p>
+</footer>
+    
 </body>
 
 </html>

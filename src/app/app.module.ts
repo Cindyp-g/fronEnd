@@ -10,6 +10,7 @@ import { MascotaComponent } from './components/mascota/mascota.component';
 import { DiagnosticoComponent } from './components/diagnostico/diagnostico.component';
 import { AlumnoComponent } from './components/alumno/alumno.component';
 import { usuarioComponent } from './components/usuario/usuario.component';
+import { JustificanteComponent } from './components/justificante/justificante.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { usuarioComponent } from './components/usuario/usuario.component';
     MascotaComponent,
     DiagnosticoComponent,
     AlumnoComponent,
-    usuarioComponent
+    usuarioComponent,
+    JustificanteComponent
   ],
   imports: [
     BrowserModule,
